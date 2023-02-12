@@ -1,0 +1,92 @@
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'timeConversion' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts STRING s as parameter.
+#
+
+def timeConversion(s):
+    s = str(s)
+    x = s.find('PM')
+    size = len(s)
+
+    if x > 0:
+        if int(s[0:2]) == 12:
+            time = s[:len(s) - 2]
+            print(time)
+        elif int(s[0:2]) == 11:
+            twe = ('23')
+            res = s.replace(s[0:2], twe, 1)
+            time = res[:len(res) - 2]
+            print(time)
+        elif int(s[0:2]) == 10:
+            twe = ('22')
+            res = s.replace(s[0:2], twe, 1)
+            time = res[:len(res) - 2]
+            print(time)
+        elif int(s[0:2]) == 9:
+            twe = ('21')
+            res = s.replace(s[0:2], twe, 1)
+            time = res[:len(res) - 2]
+            print(time)
+        elif int(s[0:2]) == 8:
+            twe = ('20')
+            res = s.replace(s[0:2], twe, 1)
+            time = res[:len(res) - 2]
+            print(time)
+        elif int(s[0:2]) == 7:
+            twe = ('19')
+            res = s.replace(s[0:2], twe, 1)
+            time = res[:len(res) - 2]
+            print(time)
+        elif int(s[0:2]) == 6:
+            twe = ('18')
+            res = s.replace(s[0:2], twe, 1)
+            time = res[:len(res) - 2]
+            print(time)
+        elif int(s[0:2]) == 5:
+            twe = ('17')
+            res = s.replace(s[0:2], twe, 1)
+            time = res[:len(res) - 2]
+            print(time)
+        elif int(s[0:2]) == 4:
+            twe = ('16')
+            res = s.replace(s[0:2], twe, 1)
+            time = res[:len(res) - 2]
+            print(time)
+        elif int(s[0:2]) == 3:
+            twe = ('15')
+            res = s.replace(s[0:2], twe, 1)
+            time = res[:len(res) - 2]
+            print(time)
+        elif int(s[0:2]) == 2:
+            twe = ('14')
+            res = s.replace(s[0:2], twe, 1)
+            time = res[:len(res) - 2]
+            print(time)
+        elif int(s[0:2]) == 1:
+            twe = ('13')
+            res = s.replace(s[0:2], twe, 1)
+            time = res[:len(res) - 2]
+            print(time)
+    elif x == -1:
+        if int(s[0:2]) == 12:
+            twe = ('00')
+            res = s.replace(s[0:2], twe, 1)
+            time = res[:len(res) - 2]
+            print(time)
+        else:
+            time = s[:len(s) - 2]
+            print(time)
+
+if __name__ == '__main__':
+
+    s = input()
+
+    result = timeConversion(s)
