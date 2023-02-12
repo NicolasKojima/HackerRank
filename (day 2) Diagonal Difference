@@ -1,0 +1,23 @@
+def diagonalDifference(arr):
+    x = arr[0][0] + arr[1][1] + arr[2][2]
+    y = arr[0][2] + arr [1][1] + arr [2][0]
+    z = [x ,y]
+    z.sort(reverse=True)
+    result = (z[0]-z[1])
+    return(result)
+        
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    arr = []
+
+    for _ in range(n):
+        arr.append(list(map(int, input().rstrip().split())))
+
+    result = diagonalDifference(arr)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
