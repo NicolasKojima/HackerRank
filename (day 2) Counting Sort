@@ -1,0 +1,12 @@
+loop = len(arr)
+    arr1 = [0]*100
+    num = 0
+    add = 0
+    while loop > 0:
+        add = arr[num]
+        arr1[add] = arr1[add] + 1
+        num = num + 1
+        add = 0
+        loop = loop - 1
+    
+    return(arr1) 
