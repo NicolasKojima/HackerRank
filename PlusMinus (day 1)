@@ -1,0 +1,44 @@
+import math
+arr = [1,2,0,-2,-9]
+x = len(arr) + 1
+c = 0
+while (x > 1):
+  if arr[c] > 0:
+    arr[c] = 1
+    c = c + 1
+    x = x - 1
+  elif arr[c] == 0:
+    arr[c] = 0
+    c = c + 1
+    x = x - 1
+  else:
+    arr[c] = -1
+    c = c + 1
+    x = x - 1
+
+print (arr)
+y = len(arr) + 1
+arr1 = [int(0)]*3
+c1 = 0
+
+while y > 1:
+  if arr[c1] > 0:
+    arr1[0] = arr1[0] + 1
+    c1 = c1 + 1
+    y = y - 1
+  elif arr[c1] == 0:
+    arr1[1] = arr1[1] + 1
+    c1 = c1 + 1
+    y = y - 1
+  elif arr[c1] < 0:
+    arr1[2] = arr1[2] + 1
+    c1 = c1 + 1
+    y = y - 1
+    
+print (arr1)
+value1 = (arr1[0]/len(arr))
+value2 = (arr1[1]/len(arr))
+value3 = (arr1[2]/len(arr))
+print(format(value1, '.6f'))
+print(format(value2, '.6f'))
+print(format(value3, '.6f'))
