@@ -1,0 +1,4 @@
+def lonelyinteger(a):
+    for number in a:
+        if(a.count(number) == 1):
+            return(number)
