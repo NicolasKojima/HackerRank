@@ -1,0 +1,79 @@
+def check_is_digit(input_str):
+    if input_str.strip().isdigit():
+        print("User input is Number")
+    else:
+        print("User input is string")
+s = ["aaab", "baa", "aaa"]
+x = len(s)
+var = 0
+
+def createList(r1, r2):
+  if (r1 == r2):
+    return r1
+  else:
+    res = []
+    while(r1 < r2+1 ):
+      res.append(r1)
+      r1 += 1
+    return res
+
+def Convert(string):
+    list1 = []
+    list1[:0] = string
+    return list1
+
+alph = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+alph1 = ("abcdefghijklmnopqrstuvwxyz")
+r1 = alph1.find("a")
+r2 = alph1.find("z")
+
+while x > 0:
+  conv = Convert(s[var])
+  print(conv)
+  i = len(s)
+  length = len(s[var])
+  if length % 2 == 0:
+    str1 = slice(0,length//2)
+    str2 = slice(length//2,length)
+    if str1 == str2:
+      var = var + 1
+      x = x - 1
+      print(-1)
+      if str1 == str2:
+        print(-1)
+        print(s[var],1)
+      else:
+        print(s[var])
+        var = var + 1       
+    else:
+      length1 = len(conv)
+      length2 = len(conv)
+      y = 0
+      while length1 > 0:
+        while y < length2:
+          print(y)
+          if s[var][y] == s[var][y + 1]:
+              y = y + 1
+              length1 = length1 - 1
+          elif s[var][y] != s[var][y + 1]:
+              if 0 <= y + 2 < length2:
+                    if s[var][y + 1] != s[var][y + 2]:
+                          s.replace(s[var][y + 1], '')
+                          length1 + length1 - 1
+                          y = y + 1
+              else:
+                    del conv[y + 1]
+                    print(conv)
+                    length1 + length1 - 1
+                    y = y + 1
+      print(s[var])
+      length1 + length1 - 1
+      var = var + 1
+      x = x - 1
+  else:
+    print("error")
+    break
+
+
+
+
